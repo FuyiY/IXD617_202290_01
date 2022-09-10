@@ -3,8 +3,8 @@ IXD 617 Advanced Tech: Mobile Web
 ## Fuyi Yang
 
 ### Important Links
-- http://fuyisf.com/aau/IXD617/
-- http://github.com/FuyiY/IXD617_202290_01
+- https://fuyisf.com/aau/IXD617/
+- https://github.com/FuyiY/IXD617_202290_01
 
 
 
