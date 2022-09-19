@@ -8,6 +8,7 @@ body{
     text-align: center;
     font-size: 35px;
   }
+ 
 h1{ color: #111; 
     font-family: 'Helvetica Neue', sans-serif; 
     font-size: 155px; 
@@ -60,14 +61,6 @@ h2{ background-color: #111;
     text-align: center;
 
 }
-footer {
-    background-color: #111;
-    color: #F2F2F2;
-    text-align: center;
-    font-size: 15px;
-    padding: 55px;
-    
-}
 
 footer a:link, 
 footer a:visited { 
@@ -75,40 +68,60 @@ footer a:visited {
 	
 }
 
-
-
-
 .page-wrapper { 
 	padding: 0 175px 0 110px;  
 	margin: 0; 
-	position: relative;
-	}
+	position: absolute;
+    
+	
+}
 
 .summary p {
         font: italic 1.1em/2.2 georgia; 
         text-align: center;
-        }
+        
+    }
 
-.supporting {	
+
+.supporting {
+            position: absolute;
+            right: 30px;	
+            width: 1050px;
             padding-left: 300px; 
             margin-bottom: 0px;
-            }     
+            
+        }     
+
             
 .sidebar {
+            position: relative;
+            right: 100px;
+            width: 300px;
             padding-right: 850px; 
-            padding-top: 30px;
-      
-
- 
-      
           
+            
                 } 
 
-                       
-        
+     
 .sidebar li a:visited {
             color: #d0b9df;
-                            
+             
         }
+        
+footer {
+        display: block;
+        background-color: #111;
+        text-align: center;
+        font-size: 15px;
+        bottom: 0;
+        width: 100%;
+        padding: 100px;
+
+           
+        }
+
+.wrapper {border-style: solid;}
+
+
 
 
