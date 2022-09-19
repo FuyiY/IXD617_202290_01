@@ -42,7 +42,7 @@ h3 {
 p { 
     margin-top: 20px; 
     text-align: fixed;
-    font-size: 25px;
+    font-size: 20px;
     
 }
 
@@ -112,7 +112,7 @@ footer {
         display: block;
         background-color: #111;
         text-align: center;
-        font-size: 15px;
+        font-size: 18px;
         bottom: 0;
         width: 100%;
         padding: 100px;
