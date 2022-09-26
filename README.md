@@ -11,3 +11,4 @@ IXD 617 Advanced Tech: Mobile Web
 ### Assignment Links
 - http://fuyisf.com/aau/IXD617/profile/
 - http://fuyisf.com/aau/IXD617/csszengarden/
+- http://fuyisf.com/aau/IXD617/pdf/fish%20app.pdf
