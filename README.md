@@ -17,5 +17,8 @@ IXD 617 Advanced Tech: Mobile Web
 
 ###### Accordian & Tab Group
 - http://fuyisf.com/aau/IXD617/examples/jquery.html
+###### jQuery Mobile
+- http://fuyisf.com/aau/IXD617/examples/jquery_mobile.html
+
 #### PDF Proposal:
 - http://fuyisf.com/aau/IXD617/pdf/fish%20app.pdf
