@@ -273,12 +273,14 @@ a {
     display:flex;
     flex-direction: column;
     border-radius: 0.3em;
-    overflow:hidden;
+    overflow:hidden; 
     transition: all 0.3s;
 }
 .modal.active .modal-popup {
     transform: translate(-50%, -50%);
 }
+
+
 
 
 .modal-drawer {
@@ -289,6 +291,7 @@ a {
     transition: all 0.3s;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
+
 
 .modal-drawer.right,
 .modal-drawer.left {
@@ -334,4 +337,5 @@ a {
     overflow:auto;
 
     padding: 1em;
+    
 }
