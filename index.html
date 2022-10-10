@@ -21,7 +21,9 @@
         <div data-role="main" class="display-flex flex-column">
             <div class="flex-stretch signin-hero">
                 <img src="images/icons/logo.png" alt="" class="hero-icon">
+                <header style="color: whitesmoke;padding: 2em;font-size: large;">Glass Bottom</header>
             </div>
+           
             <form class="form" id="signin-form" data-ajax="false">
                 <div class="warning"></div>
                 <div class="form-control">
@@ -41,8 +43,12 @@
                     </div>
                 </div>
                
-                <div class="form-control" style="text-align:center; font-size: 0.7em">
-                    Don't have an account? <a href="#signup-page">Sign Up!</a>
+                <div class="form-control" style="text-align:center; font-size: 0.9em; color: #D3B4AB;">
+                    Don't have an account? <a href="#signup-page" style="color:#9DF0E7 ;">Sign Up!</a>
+                </div>
+                <div>
+                    <span id="login_failed" style="color: red;">
+                    </span>
                 </div>
             </form>
         <div class="flex-stretch"></div>
@@ -70,8 +76,8 @@
                 <div class="form-control">
                     <input type="submit" class="form-button" value="Click me" data-role="none">
                 </div>
-                <div class="form-control" style="text-align:center; font-size: 0.7em">
-                    Already have an account? <a href="#signin-page">Sign In!</a>
+                <div class="form-control" style="text-align:center; font-size: 0.7em; color: #D3B4AB">
+                    Already have an account? <a href="#signin-page" style="color: #9DF0E7 ;">Sign In!</a>
                 </div>
             </form>
             <div class="flex-stretch"></div>
@@ -99,9 +105,9 @@
     </div>
     <footer data-role="footer">
         <ul>
-            <li><a href="#recent-page">Recent</a></li>
-            <li><a href="#list-page">List</a></li>
-            <li><a href="#user-profile-page">Profile</a></li>
+            <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
+            <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
+            <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
         </ul>
     </footer>
 </section>
@@ -115,46 +121,57 @@
         <div data-role="main">
             <div class="animallist">
             <!-- div.animallist-item*10>a[href="#animal-profile-page"]>{Animal $} -->
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 1</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 2</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 3</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 4</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 5</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 6</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 7</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 8</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 9</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 10</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 1</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 2</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 3</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 4</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 5</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 6</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 7</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 8</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 9</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 10</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 1</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 2</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 3</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 4</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 5</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 6</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 7</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 8</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 9</a></div>
-            <div class="animallist-item"><a href="#animal-profile-page">Fish 10</a></div>
+          <div class="animallist-item"><a href="#animal-profile-page">
+                <img src="images/fish1.png"></a>
+            <br><a href="animallist-item">Mackerel</a>
         </div>
+        <div class="animallist-item"><a href="#animal-profile-page">
+            <img src="images/fish2.png"></a>
+        <br><a href="animallist-item">Pike Perch</a>
+    </div>
+
+    <div class="animallist-item"><a href="#animal-profile-page">
+        <img src="images/fish3.png"></a>
+    <br><a href="animallist-item">Herring</a>
+</div>
+
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish4.png"></a>
+<br><a href="animallist-item">Turbot Brill</a>
+</div>
+
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish5.png"></a>
+<br><a href="animallist-item">Rockfish</a>
+</div>
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish6.png"></a>
+<br><a href="animallist-item">Tuna</a>
+</div>
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish7.png"></a>
+<br><a href="animallist-item">Pamgasius</a>
+</div>
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish8.png"></a>
+<br><a href="animallist-item">Ghoramachi</a>
+</div>
+<div class="animallist-item"><a href="#animal-profile-page">
+    <img src="images/fish9.png"></a>
+<br><a href="animallist-item">Herring</a>
+</div>
+</div>
+        </div>
+
         <div class="floater bottom right">
             <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
         </div>
         </div>
         <footer data-role="footer">
             <ul>
-                <li><a href="#recent-page">Home</a></li>
-                <li><a href="#list-page">Fish</a></li>
-                <li><a href="#user-profile-page">User</a></li>
+                <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
+            <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
+            <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
             </ul>
         </footer>
   
@@ -175,16 +192,31 @@
       <!-- USER PROFILE PAGE -->
       <section data-role="page" id="user-profile-page">
         <div data-role="main">
-            <h1>User Profile</h1>
-            <div>
-                <a href="#" class="js-logout">Log out</a>
+            <header data-role="header">
+                <h1></h1>
+                <ul>
+                    <li><a href="#" class="js-logout" style="text-align: center;">Log out</a></li>
+                    <li class="flex-stretch"></li>
+                    <li><a href="#animal-edit-page">Edit</a></li>
+                </ul>
+            </header>
+            <div data-role="main">
+                <div class="profilelist">
+                    <div class="profile-item">
+                        <img src="images/prfile.png"  alt="" style="padding:2.5em" width="380" ></a>
+                        <p style="color: #F2F2F2; text-align: center; ">John Smith</p>
+    
+                        
             </div>
         </div>
+    </div>
+   
+            </div>
         <footer data-role="footer">
             <ul>
-                <li><a href="#recent-page">Recent</a></li>
-                <li><a href="#list-page">List</a></li>
-                <li><a href="#user-profile-page">Profile</a></li>
+                <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
+                <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
+                <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
             </ul>
         </footer>
     </section>
@@ -193,15 +225,31 @@
     <!-- Animal PROFILE PAGE -->
     <section data-role="page" id="animal-profile-page">
         <header data-role="header">
-            <h1>Fish Profile</h1>
+            <h1>Mackerel</h1>
             <ul>
-                <li><a href="#" data-rel="back">Back</a></li>
+                <li><a href="#" data-rel="back"><img src="images/icons/left.png"></a></li>
                 <li class="flex-stretch"></li>
                 <li><a href="#animal-edit-page">Edit</a></li>
             </ul>
         </header>
         <div data-role="main">
-            Fish Profile
+            <div class="animallist">
+                <div class="animallist-item">
+                    <a href=""><img src="images/fish1.png" alt="fish1"></a>
+                    <br>Mackerel
+
+                    <p>Mackerel is a common name applied to a number of different species of pelagic fish, mostly from the family Scombridae. They are found in both temperate and tropical seas, mostly living along the coast or offshore in the oceanic environment.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div id="list-add-modal" class="modal">
+            <div class="modal-back" data-deactivate="#list-add-modal"></div>
+            <div class="modal-popup">
+                <div class="modal-head">Head</div>
+                <div class="modal-body">Body</div>
+                <div class="modal-foot">Foot</div>
+            </div>
         </div>
     </section>
 

@@ -9,11 +9,11 @@
 
     --header-height: 3rem;
 
-    --color-main-rgb: 101,186,183;
+    --color-main-rgb: 21,40,86;
     --color-main-hue: 222;
-    --color-main-light: hsl(var(--color-main-hue), 52%, 77%);
+    --color-main-light: hsl(var(--color-main-hue), 56%, 86%);
     --color-main-medium: hsl(var(--color-main-hue), 61%, 21%);
-    --color-main-dark: hsl(var(--color-main-hue), 57%, 27%);
+    --color-main-dark: hsl(var(--color-main-hue), 85%, 14%);
 
 
     --color-neutral-lighter: rgb(234, 238, 236);
@@ -25,6 +25,7 @@
 body {
     margin:0;
     font-family:var(--font-body);
+    background-color: var(--color-main-dark);
 }
 
 a {
@@ -144,18 +145,19 @@ a {
     font-size: 0.8em;
     color: var(--color-neutral-medium);
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 .form-input {
     background-color: transparent;
     border-width: 1px;
     border-color: var(--color-neutral-light);
     border-style: solid;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
     padding: 0.5em 1em;
     display: inline-block;
     width: 100%;
     font: inherit;
+    -webkit-text-fill-color: #D1DEF0;
 }
 .form-button {
     background-color: var(--color-neutral-lighter);
@@ -177,7 +179,7 @@ a {
 
 #signin-form,
 #signup-form {
-    padding: 1em;
+    padding: 4em;
 }
 
 
@@ -335,7 +337,24 @@ a {
     height: 100%;
     position:relative;
     overflow:auto;
+    background-color: var(--color-main-dark);
 
-    padding: 1em;
+    padding: 3em;
+    text-align: center;
+    
     
 }
+.animallist-item {
+background-color: var(--color-main-light);
+border-radius: 1em;
+padding: 30px;
+margin-bottom: 1em;
+text-align: center;
+box-shadow: 5px 5px 5px black;
+}
+ 
+
+
+/* user profile page */
+
+
