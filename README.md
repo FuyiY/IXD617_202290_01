@@ -22,3 +22,10 @@ IXD 617 Advanced Tech: Mobile Web
 
 #### PDF Proposal:
 - http://fuyisf.com/aau/IXD617/pdf/fish%20app.pdf
+
+#### Screenshots link:
+- http://fuyisf.com/aau/IXD617/screenshots/midterm/01.png
+- http://fuyisf.com/aau/IXD617/screenshots/midterm/02.png
+- http://fuyisf.com/aau/IXD617/screenshots/midterm/03.png
+- http://fuyisf.com/aau/IXD617/screenshots/midterm/04.png
+- http://fuyisf.com/aau/IXD617/screenshots/midterm/05.png
