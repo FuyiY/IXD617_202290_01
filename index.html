@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glass Bottom</title>
 
+
+    <meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" href="./icon_256x256.png" type="image/x-icon">
+    <link rel="icon" sizes="256x256" href="./icon_256x256.png">
+
     <!-- <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css"> -->
     <link rel="stylesheet" href="src/css/app.css">
     
@@ -91,23 +96,24 @@
     <div data-role="main">
         <div class="map"></div>
 
-        <div class="floater top left">
-            <a href="#" class="btn-circle" data-activate="#recent-add-modal">☰</a>
-        </div>
-
-        <div id="recent-add-modal" class="modal">
-            <div class="modal-back transparent" data-deactivate="#recent-add-modal"></div>
-            <div class="modal-drawer left">
-                <div class="modal-head">Head</div>
-                <div class="modal-body">Body</div>
-            </div>
+        <div class="floater bottom right">
+            <a href="#choose-animal-page" class="btn-circle">&plus;</a>
         </div>
     </div>
     <footer data-role="footer">
         <ul>
-            <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
-            <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
-            <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
+            <li><a href="#recent-page">
+                <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
+                <span class="footer-label">Recent</span>
+                </a></li>
+            <li><a href="#list-page">
+                <span class="footer-icon">
+                    <img class="icon" src="images/icons/list.png"></span>
+                    <span class="footer-label">List</span></a></li>
+            <li><a href="#user-profile-page">
+                <span class="footer-icon">
+                    <img class="icon" src="images/icons/user.png"></span>
+                    <span class="footer-label"> Profile</span></a></li>
         </ul>
     </footer>
 </section>
@@ -117,11 +123,14 @@
     <section data-role="page" id="list-page">
         <header data-role="header">
             <h1>Fish List</h1>
+         
         </header>
+       
         <div data-role="main">
             <div class="animallist">
             <!-- div.animallist-item*10>a[href="#animal-profile-page"]>{Animal $} -->
-          <div class="animallist-item"><a href="#animal-profile-page">
+          <div class="animallist-item">
+            <a href="#animal-profile-page">
                 <img src="images/fish1.png"></a>
             <br><a href="animallist-item">Mackerel</a>
         </div>
@@ -169,24 +178,70 @@
         </div>
         <footer data-role="footer">
             <ul>
-                <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
-            <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
-            <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
+                <li><a href="#recent-page">
+                    <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
+                    <span class="footer-label">Recent</span>
+                    </a></li>
+                <li><a href="#list-page">
+                    <span class="footer-icon">
+                        <img class="icon" src="images/icons/list.png"></span>
+                        <span class="footer-label">List</span></a></li>
+                <li><a href="#user-profile-page">
+                    <span class="footer-icon">
+                        <img class="icon" src="images/icons/user.png"></span>
+                        <span class="footer-label"> Profile</span></a></li>
             </ul>
         </footer>
   
 
-    <div id="list-add-modal" class="modal">
-        <div class="modal-back" data-deactivate="#list-add-modal"></div>
-        <div class="modal-popup">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">Body</div>
-            <div class="modal-foot">Foot</div>
-        </div>
-    </div>
+  
 </section>
 
   
+  <!-- CHOOSE ANIMAL PAGE -->
+  <section data-role="page" id="choose-animal-page">
+    <header data-role="header">
+        <h1>Add Fish</h1>
+        <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-location-page">Next</a></li>
+        </ul>
+    </header>
+    <div data-role="main">
+        form for choose fish
+    </div>
+</section>
+
+<!-- CHOOSE LOCATION PAGE -->
+<section data-role="page" id="choose-location-page">
+    <header data-role="header">
+        <h1>Choose Location</h1>
+        <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#choose-description-page">Next</a></li>
+        </ul>
+    </header>
+    <div data-role="main">
+        <div class="map"></div>
+    </div>
+</section>
+
+<!-- CHOOSE LOCATION PAGE -->
+<section data-role="page" id="choose-description-page">
+    <header data-role="header">
+        <h1>Description of Catch</h1>
+        <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#list-page">Save</a></li>
+        </ul>
+    </header>
+    <div data-role="main">
+        for for description
+    </div>
+</section>
 
 
       <!-- USER PROFILE PAGE -->
@@ -197,60 +252,68 @@
                 <ul>
                     <li><a href="#" class="js-logout" style="text-align: center;">Log out</a></li>
                     <li class="flex-stretch"></li>
-                    <li><a href="#animal-edit-page">Edit</a></li>
+                    <li><a href="#animal-edit-page" style="margin-top: 6px;"><img class="icon" src="images/icons/setting.png" ></a></li>
                 </ul>
             </header>
             <div data-role="main">
                 <div class="profilelist">
                     <div class="profile-item">
-                        <img src="images/prfile.png"  alt="" style="padding:2.5em" width="380" ></a>
-                        <p style="color: #F2F2F2; text-align: center; ">John Smith</p>
-    
-                        
+                        <img src="images/prfile.png"  alt=""width="200" ></a>
+                        <h1 style="color: #F2F2F2; text-align: center; font-size: 20px; ">John Smith</h1>
+                        <p style= "text-align: center;">San Francisco, CA</p>
+   
+
             </div>
         </div>
     </div>
    
             </div>
-        <footer data-role="footer">
-            <ul>
-                <li><a href="#recent-page"><img src="images/icons/home.png"></a></li>
-                <li><a href="#list-page"><img src="images/icons/list.png"></a></li>
-                <li><a href="#user-profile-page"><img src="images/icons/user.png"></a></li>
-            </ul>
-        </footer>
+            <footer data-role="footer">
+                <ul>
+                    <li><a href="#recent-page">
+                        <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
+                        <span class="footer-label">Recent</span>
+                        </a></li>
+                    <li><a href="#list-page">
+                        <span class="footer-icon">
+                            <img class="icon" src="images/icons/list.png"></span>
+                            <span class="footer-label">List</span></a></li>
+                    <li><a href="#user-profile-page">
+                        <span class="footer-icon">
+                            <img class="icon" src="images/icons/user.png"></span>
+                            <span class="footer-label"> Profile</span></a></li>
+                </ul>
+            </footer>
     </section>
 
 
     <!-- Animal PROFILE PAGE -->
     <section data-role="page" id="animal-profile-page">
         <header data-role="header">
-            <h1>Mackerel</h1>
+           
             <ul>
                 <li><a href="#" data-rel="back"><img src="images/icons/left.png"></a></li>
                 <li class="flex-stretch"></li>
-                <li><a href="#animal-edit-page">Edit</a></li>
+                <li><a href="#animal-edit-page"><img src="images/icons/pencil.png"></a></li>
             </ul>
         </header>
         <div data-role="main">
-            <div class="animallist">
-                <div class="animallist-item">
-                    <a href=""><img src="images/fish1.png" alt="fish1"></a>
-                    <br>Mackerel
+                <div class="fish-profile-page">
+                    <a href=""><img src="images/fish1.png" alt="fish1" class="fishcenter"></a></div>
+                    <div class="fishdetails">
+                    <h1>Catch details</h1>
+                    
+                        <p>Weight:  3lb 8oz</p>
+                        <p>Length: 23 in</p>
 
-                    <p>Mackerel is a common name applied to a number of different species of pelagic fish, mostly from the family Scombridae. They are found in both temperate and tropical seas, mostly living along the coast or offshore in the oceanic environment.</p>
+                <p>Catch and release:  No </p>
+                <p>Location: San Francisco Bay
+                    California
+                    37.747751, -122.342389</p>
                 </div>
                 </div>
             </div>
-        </div>
-        <div id="list-add-modal" class="modal">
-            <div class="modal-back" data-deactivate="#list-add-modal"></div>
-            <div class="modal-popup">
-                <div class="modal-head">Head</div>
-                <div class="modal-body">Body</div>
-                <div class="modal-foot">Foot</div>
-            </div>
-        </div>
+       
     </section>
 
 

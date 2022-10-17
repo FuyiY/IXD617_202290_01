@@ -338,23 +338,65 @@ a {
     position:relative;
     overflow:auto;
     background-color: var(--color-main-dark);
-
-    padding: 3em;
     text-align: center;
     
     
 }
 .animallist-item {
 background-color: var(--color-main-light);
-border-radius: 1em;
-padding: 30px;
-margin-bottom: 1em;
+
+padding: 20px;
+margin-bottom: 0.1em;
 text-align: center;
 box-shadow: 5px 5px 5px black;
 }
  
 
+.fish-profile-page {
 
-/* user profile page */
+    background-color: var(--color-main-light);
+    border-radius: 10%;
+    padding: 7rem;
+    margin: 2em;
+box-shadow: 1px 1px 1px white;
+}
+
+.fishdetails {
+    color: #D1DEF0;
+    text-align: justify;
+    padding: 3em;
+
+}
+   
+ 
+
+[data-role="footer"] .icon {
+    width:  1.3rem;
+    height: 1.3rem;
+    vertical-align: middle;
+
+}
+  
+[data-role="footer"] a {
+    line-height: 1rem;
+}
+
+.footer-icon {
+    display: block;
+    line-height: 1.7rem;
+}
+.footer-label {
+    line-height: 1.3rem;
+    font-size: 0.6rem;
+    display: block;
+}
 
 
+.profile-item {
+    color: #D1DEF0;
+    height: 100%;
+    position: relative;
+    padding: 5.5em;
+  
+
+}
