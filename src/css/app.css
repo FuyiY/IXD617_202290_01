@@ -190,9 +190,9 @@ a {
     align-items: center;
 }
 .hero-icon {
-    width: 40vw;
-    aspect-ratio: 1 / 1;
-
+    width: 45vw;
+    aspect-ratio: 1/1;
+    margin-top: 6rem;
 }
 
 
@@ -364,10 +364,13 @@ box-shadow: 1px 1px 1px white;
 .fishdetails {
     color: #D1DEF0;
     text-align: justify;
-    padding: 3em;
+    padding: 2em;
 
 }
-   
+.fishcenter {
+    width: 33rem;
+
+} 
  
 
 [data-role="footer"] .icon {
