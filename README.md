@@ -19,6 +19,8 @@ IXD 617 Advanced Tech: Mobile Web
 - http://fuyisf.com/aau/IXD617/examples/jquery.html
 ###### jQuery Mobile
 - http://fuyisf.com/aau/IXD617/examples/jquery_mobile.html
+###### Data Generator
+- http://fuyisf.com/aau/IXD617/data/generator.html
 
 #### PDF Proposal:
 - http://fuyisf.com/aau/IXD617/pdf/fish%20app.pdf
