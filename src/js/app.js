@@ -9,16 +9,15 @@ $(() => {
     $(document)
 
     .on("pagecontainerbeforeshow", function(event, ui) {
-
-              /* PAGE ROUTES */
-              switch(ui.toPage[0].id) {
-                case "recent-page": RecentPage(); break;
-                case "list-page": ListPage(); break;
-                case "user-profile-page": UserProfilePage(); break;
-                case "animal-profile-page": AnimalProfilePage(); break;
-            }
-        })
-
+        
+        /* PAGE ROUTES */
+        switch(ui.toPage[0].id) {
+            case "recent-page": RecentPage(); break;
+            case "list-page": ListPage(); break;
+            case "user-profile-page": UserProfilePage(); break;
+            case "animal-profile-page": AnimalProfilePage(); break;
+        }
+    })
 
 
     // EVENT DELEGATION

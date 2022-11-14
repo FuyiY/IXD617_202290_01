@@ -1,8 +1,48 @@
 import { query } from "./functions.js"
+import { makeMap, makeMarkers } from "./maps.js";
 import { makeAnimalList, makeAnimalProfileDescription, makeUserProfilePage } from "./parts.js";
 
 
-export const RecentPage = async() => {}
+export const RecentPage = async() => {
+    // let {result:animals} = await query({
+    //     type:"animal_locations_by_user_id",
+    //     params:[sessionStorage.userId]
+    // });
+
+    // console.log(animals);
+
+    // let my_animal_ids = [...new Set(animals.map(o=>o.animal_id))];
+    // console.log(my_animal_ids);
+    // let last_locations = my_animal_ids.map(id=>{
+    //     let locations = animals.filter(o=>id===o.animal_id);
+    //     locations.sort((a, b) => {
+    //         if (a.date_create > b.date_create) {
+    //           return 1;
+    //         }
+    //         if (a.date_create < b.date_create) {
+    //           return -1;
+    //         }
+    //         return 0;
+    //       });
+    //     return locations.slice(-1)[0];
+    // })
+    // console.log(last_locations)
+    
+    let {result:animal_locations} = await query({
+        type:"recent_animal_locations",
+        params:[sessionStorage.userId]
+    });
+    console.log(animal_locations);
+
+    let valid_animals = animal_locations.reduce((r,o)=>{
+        o.icon = o.img;
+        if (o.lat && o.lng) r.push(o);
+        return r;
+    },[])
+
+    let map_el = await makeMap("#recent-page .map");
+    makeMarkers(map_el,valid_animals);
+}
 
 export const ListPage = async() => {
 
@@ -44,4 +84,7 @@ export const AnimalProfilePage = async() => {
         params:[sessionStorage.animalId]
     });
     console.log(locations)
+
+    let map_el = await makeMap("#animal-profile-page .map");
+    makeMarkers(map_el,locations);
 }

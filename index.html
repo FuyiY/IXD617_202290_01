@@ -17,6 +17,12 @@
     <script src="lib/js/jquery-2.2.4.min.js"></script>
     <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
     <script src="src/js/app.js" type="module"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYou-QGQggsh52O0vQ9hY1HJAA1CG-ZYc"
+    defer
+  ></script>
+   
+
 </head>
 <body>
 
@@ -126,77 +132,38 @@
         </header>
        
         <div data-role="main">
-            <div class="animallist">
-            <!-- div.animallist-item*10>a[href="#animal-profile-page"]>{Animal $} -->
-          <div class="animallist-item">
-            <a href="#animal-profile-page">
-                <img src="images/fish1.png"></a>
-            <br><a href="animallist-item">Mackerel</a>
-        </div>
-        <div class="animallist-item"><a href="#animal-profile-page">
-            <img src="images/fish2.png"></a>
-        <br><a href="animallist-item">Pike Perch</a>
-    </div>
-
-    <div class="animallist-item"><a href="#animal-profile-page">
-        <img src="images/fish3.png"></a>
-    <br><a href="animallist-item">Herring</a>
-</div>
-
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish4.png"></a>
-<br><a href="animallist-item">Turbot Brill</a>
-</div>
-
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish5.png"></a>
-<br><a href="animallist-item">Rockfish</a>
-</div>
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish6.png"></a>
-<br><a href="animallist-item">Tuna</a>
-</div>
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish7.png"></a>
-<br><a href="animallist-item">Pamgasius</a>
-</div>
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish8.png"></a>
-<br><a href="animallist-item">Ghoramachi</a>
-</div>
-<div class="animallist-item"><a href="#animal-profile-page">
-    <img src="images/fish9.png"></a>
-<br><a href="animallist-item">Herring</a>
-</div>
-</div>
-        </div>
-
-        <div class="floater bottom right">
-            <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
-        </div>
+  
+            <div class="animallist"></div>
+            <div class="floater bottom right">
+                <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+            </div>
         </div>
         <footer data-role="footer">
             <ul>
                 <li><a href="#recent-page">
                     <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
                     <span class="footer-label">Recent</span>
-                    </a></li>
+                </a></li>
                 <li><a href="#list-page">
-                    <span class="footer-icon">
-                        <img class="icon" src="images/icons/list.png"></span>
-                        <span class="footer-label">List</span></a></li>
+                    <span class="footer-icon"><img class="icon" src="images/icons/list.png"></span>
+                    <span class="footer-label">List</span></a></li>
                 <li><a href="#user-profile-page">
-                    <span class="footer-icon">
-                        <img class="icon" src="images/icons/user.png"></span>
-                        <span class="footer-label"> Profile</span></a></li>
+                    <span class="footer-icon"><img class="icon" src="images/icons/user.png"></span>
+                    <span class="footer-label">Profile</span></a></li>
             </ul>
         </footer>
-  
 
-  
-</section>
+        <div id="list-add-modal" class="modal">
+            <div class="modal-back" data-deactivate="#list-add-modal"></div>
+            <div class="modal-popup">
+                <div class="modal-head">Head</div>
+                <div class="modal-body">Body</div>
+                <div class="modal-foot">Foot</div>
+            </div>
+        </div>
+    </section>
 
-  
+
   <!-- CHOOSE ANIMAL PAGE -->
   <section data-role="page" id="choose-animal-page">
     <header data-role="header">
@@ -245,75 +212,49 @@
 
       <!-- USER PROFILE PAGE -->
       <section data-role="page" id="user-profile-page">
-        <div data-role="main">
-            <header data-role="header">
-                <h1></h1>
-                <ul>
-                    <li><a href="#" class="js-logout" style="text-align: center;">Log out</a></li>
-                    <li class="flex-stretch"></li>
-                    <li><a href="#animal-edit-page" style="margin-top: 6px;"><img class="icon" src="images/icons/setting.png" ></a></li>
-                </ul>
-            </header>
-            <div data-role="main">
-                <div class="profilelist">
-                    <div class="profile-item">
-                        <img src="images/prfile.png"  alt=""width="200" ></a>
-                        <h1 style="color: #F2F2F2; text-align: center; font-size: 20px; ">John Smith</h1>
-                        <p style= "text-align: center;">San Francisco, CA</p>
-   
-
-            </div>
-        </div>
-    </div>
-   
-            </div>
-            <footer data-role="footer">
-                <ul>
-                    <li><a href="#recent-page">
-                        <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
-                        <span class="footer-label">Recent</span>
-                        </a></li>
-                    <li><a href="#list-page">
-                        <span class="footer-icon">
-                            <img class="icon" src="images/icons/list.png"></span>
-                            <span class="footer-label">List</span></a></li>
-                    <li><a href="#user-profile-page">
-                        <span class="footer-icon">
-                            <img class="icon" src="images/icons/user.png"></span>
-                            <span class="footer-label"> Profile</span></a></li>
-                </ul>
-            </footer>
+        <div data-role="main"></div>
+        <footer data-role="footer">
+            <ul>
+                <li><a href="#recent-page">
+                    <span class="footer-icon"><img class="icon" src="images/icons/home.png"></span>
+                    <span class="footer-label">Recent</span>
+                </a></li>
+                <li><a href="#list-page">
+                    <span class="footer-icon"><img class="icon" src="images/icons/list.png"></span>
+                    <span class="footer-label">List</span></a></li>
+                <li><a href="#user-profile-page">
+                    <span class="footer-icon"><img class="icon" src="images/icons/user.png"></span>
+                    <span class="footer-label">Profile</span></a></li>
+            </ul>
+        </footer>
     </section>
 
 
     <!-- Animal PROFILE PAGE -->
-    <section data-role="page" id="animal-profile-page">
-        <header data-role="header">
-           
-            <ul>
-                <li><a href="#" data-rel="back"><img src="images/icons/left.png"></a></li>
-                <li class="flex-stretch"></li>
-                <li><a href="#animal-edit-page"><img src="images/icons/pencil.png"></a></li>
-            </ul>
-        </header>
-        <div data-role="">
-              
-                    <a href=""><img src="images/fishpic.png" alt="fish1" class="fishcenter"></a></div>
-                    <div class="fishdetails">
-                    <h1 style="border-bottom: 1px solid white;">Catch details</h1>
-                    
-                        <p style="border-bottom: 1px solid white;">Weight:  3lb 8oz</p>
-                        <p style="border-bottom: 1px solid white;">Length: 23 in</p>
-
-                <p style="border-bottom: 1px solid white;">Catch and release:  No </p>
-                <p style="border-bottom: 1px solid white;">Location: San Francisco Bay
-                    California
-                    37.747751, -122.342389</p>
-                </div>
-                </div>
+  
+   <section data-role="page" id="animal-profile-page">
+    <header data-role="header">
+        <h1></h1>
+        <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#animal-edit-page">Edit</a></li>
+        </ul>
+    </header>
+    <div data-role="main">
+        <div class="animal-profile-top"></div>
+        <div class="animal-profile-nav">
+            <div class="nav-link active">Map</div>
+            <div class="nav-link">Description</div>
+        </div>
+        <div class="animal-profile-bottom">
+            <div class="animal-profile-section section-map active">
+                <div class="map"></div>
             </div>
-       
-    </section>
+            <div class="animal-profile-section section-description"></div>
+        </div>
+    </div>
+</section>
 
 
 </body>
