@@ -1,6 +1,6 @@
 import { query } from "./functions.js"
 import { makeMap, makeMarkers } from "./maps.js";
-import { makeAnimalList, makeAnimalProfileDescription, makeUserProfilePage } from "./parts.js";
+import { makeAnimalList, makeAnimalMapDescription, makeAnimalProfileDescription, makeEditAnimalForm, makeEditUserForm, makeUserProfilePage } from "./parts.js";
 
 
 export const RecentPage = async() => {
@@ -42,6 +42,30 @@ export const RecentPage = async() => {
 
     let map_el = await makeMap("#recent-page .map");
     makeMarkers(map_el,valid_animals);
+
+    map_el.data("markers").forEach((m,i)=>{
+        //console.log(m)
+        m.addListener("click",function(e){
+            //console.log(e)
+            let animal = valid_animals[i];
+            //console.log(animal)
+
+            //Just Navigate
+            //sessionStorage.animalId = animal.animal_id;
+            //$.mobile.navigate("#animal-profile-page")
+
+
+             // Open Google InfoWindow
+             //let {map,infoWindow} = map_el.data();
+             //infoWindow.open(map, m);
+            //infoWindow.setContent(makeAnimalMapDescription(animal));
+            
+            $("#map-recent-modal")
+            .addClass("active")
+            .find(".modal-body")
+            .html(makeAnimalMapDescription(animal))
+        })
+});
 }
 
 export const ListPage = async() => {
@@ -65,7 +89,7 @@ export const UserProfilePage = async() => {
 
     console.log(user)
 
-    $("#user-profile-page [data-role='main']").html(makeUserProfilePage(user))
+    $("#user-profile-page .body").html(makeUserProfilePage(user))
 }
 
 export const AnimalProfilePage = async() => {
@@ -87,4 +111,32 @@ export const AnimalProfilePage = async() => {
 
     let map_el = await makeMap("#animal-profile-page .map");
     makeMarkers(map_el,locations);
+}
+export const ChooseLocationPage = async() => {
+    let map_el = await makeMap("#choose-location-page .map");
+    makeMarkers(map_el,[]);
+}
+
+export const UserEditPage = async() => {
+    let {result:users} = await query({
+        type:"user_by_id",
+        params:[sessionStorage.userId]
+    });
+    let [user] = users;
+
+    $("#user-edit-page .body").html(makeEditUserForm(user));
+}
+
+
+export const AnimalEditPage = async() => {
+    let {result:animals} = await query({
+        type:"animal_by_id",
+        params:[sessionStorage.animalId]
+    });
+    let [animal] = animals;
+
+    $("#animal-edit-page .body").html(makeEditAnimalForm({
+        animal,
+        namespace:'animal-edit'
+    }));
 }
