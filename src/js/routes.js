@@ -79,7 +79,6 @@ export const ListPage = async() => {
 
     $("#list-page .animallist").html(makeAnimalList(animals))
 }
-
 export const UserProfilePage = async() => {
     let {result:users} = await query({
         type:"user_by_id",
@@ -112,10 +111,20 @@ export const AnimalProfilePage = async() => {
     let map_el = await makeMap("#animal-profile-page .map");
     makeMarkers(map_el,locations);
 }
+
 export const ChooseLocationPage = async() => {
     let map_el = await makeMap("#choose-location-page .map");
     makeMarkers(map_el,[]);
+    map_el.data("map").addListener("click",function(e){
+        console.log(e)
+        $("#location-lat").val(e.latLng.lat());
+        $("#location-lng").val(e.latLng.lng());
+        makeMarkers(map_el,[e.latLng]);
+    })
 }
+
+
+
 
 export const UserEditPage = async() => {
     let {result:users} = await query({
@@ -128,6 +137,20 @@ export const UserEditPage = async() => {
 }
 
 
+
+
+
+export const AnimalAddPage = async() => {
+    $("#animal-add-page .body").html(makeEditAnimalForm({
+        animal:{
+            name:'',
+            type:'',
+            breed:'',
+            description:'',
+        },
+        namespace:'animal-add'
+    }));
+}
 export const AnimalEditPage = async() => {
     let {result:animals} = await query({
         type:"animal_by_id",
