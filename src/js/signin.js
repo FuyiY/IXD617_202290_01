@@ -1,24 +1,23 @@
-
 import { query } from "./functions.js";
 
-export const checkSigninForm = () => {
+
+export const checkSigninForm = async() => {
     const userval = $("#signin-username").val();
     const passval = $("#signin-password").val();
 
-    console.log(userval, passval)
+    let founduser = await query({
+        type: 'check_signin',
+        params: [userval,passval]
+    });
 
-    if (userval === "user" && passval === "pass") {
+    if (founduser.result.length > 0) {
         // Logged In
         console.log("Success");
-        sessionStorage.userId = 3;
+        sessionStorage.userId = founduser.result[0].id;
 
         $("#signin-form")[0].reset();
-    } 
-    
-    
-    else {
+    } else {
         // Not Logged In
-     
         console.log("Failure");
         sessionStorage.removeItem("userId");
 
@@ -26,22 +25,13 @@ export const checkSigninForm = () => {
         setTimeout(()=>{$(".warning").html("");},3000)
     }
 
-    // failed login message 
-    var login_success = false; 
-  
-    if(login_success == false)
-{
-    document.getElementById("login_failed").innerHTML = "Login Failed.Please try again.";
-    
-}
-
     checkUserId();
 }
 
 
 export const checkUserId = () => {
     const pages = ["#signin-page", "#signup-page", ""];
-    
+
     if (sessionStorage.userId === undefined) {
         // not logged in
         if (!pages.some(p => p === window.location.hash)) {

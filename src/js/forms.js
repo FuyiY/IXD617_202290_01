@@ -1,4 +1,5 @@
 import { query } from "./functions.js";
+import { makeAnimalList } from "./parts.js";
 
 
 export const checkSignupForm = () => {
@@ -78,11 +79,35 @@ export const checkPasswordEditForm = () => {
     })
 }
 
+export const checkUserEditPhotoForm = () => {
+    let photo = $("#user-edit-photo-image").val();
+    
+    query({
+        type: 'update_user_photo',
+        params: [
+            photo,
+            sessionStorage.userId
+        ]
+    }).then((data)=>{
+        if (data.error) {
+            throw(data.error);
+        } else {
+            window.history.go(-1);
+        }
+    })
+}
+
+
+
+
+
+
 export const checkAnimalAddForm = () => {
     let name = $("#animal-add-name").val();
     let type = $("#animal-add-type").val();
     let breed = $("#animal-add-breed").val();
     let description = $("#animal-add-description").val();
+    let image = $("#animal-add-image").val();
     
     query({
         type: 'insert_animal',
@@ -91,7 +116,8 @@ export const checkAnimalAddForm = () => {
             name,
             type,
             breed,
-            description
+            description,
+            image
         ]
     }).then((data)=>{
         if (data.error) {
@@ -107,7 +133,9 @@ export const checkAnimalEditForm = () => {
     let type = $("#animal-edit-type").val();
     let breed = $("#animal-edit-breed").val();
     let description = $("#animal-edit-description").val();
-    
+    let image = $("#animal-edit-photo-image").val();
+
+
     query({
         type: 'update_animal',
         params: [
@@ -115,6 +143,7 @@ export const checkAnimalEditForm = () => {
             type,
             breed,
             description,
+            image,
             sessionStorage.animalId
         ]
     }).then((data)=>{
@@ -156,6 +185,36 @@ export const checkLocationAddForm = () => {
             throw(data.error);
         } else {
             window.history.go(back);
+        }
+    })
+}
+
+
+
+
+export const checkListSearchForm = (search) => {
+    query({
+        type:"search_animals",
+        params:[`%${search}%`,sessionStorage.userId]
+    }).then((data)=>{
+        if (data.error) {
+            throw(data.error);
+        } else {
+            let {result} = data;
+            $("#list-page .animallist").html(makeAnimalList(result))
+        }
+    })
+}
+export const checkListFilter = (filter,value) => {
+    query({
+        type:"filter_animals",
+        params:[filter,value,sessionStorage.userId]
+    }).then((data)=>{
+        if (data.error) {
+            throw(data.error);
+        } else {
+            let {result} = data;
+            $("#list-page .animallist").html(makeAnimalList(result));
         }
     })
 }

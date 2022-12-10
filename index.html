@@ -138,20 +138,21 @@
 </section>
 
 
-    <!-- LIST PAGE -->
-    <section data-role="page" id="list-page" >
-        <header data-role="header">
-            <h1>Fish List</h1>
-         
-        </header>
-       
-        <div data-role="main">
-  
-            <div class="animallist"></div>
-            <div class="floater bottom right">
-                <a href="#animal-add-page" class="btn-circle">&plus;</a>
-            </div>
+   <!-- LIST PAGE -->
+   <section data-role="page" id="list-page">
+    <header data-role="header">
+        <form id="list-search-form" class="hotdog" data-ajax="false">
+            <input id="list-search-input" type="search" data-role="none" placeholder="Search">
+        </form>
+    </header>
+    <header data-role="header" class="filter-bar">
+    </header>
+    <div data-role="main">
+        <div class="animallist"></div>
+        <div class="floater bottom right">
+            <a href="#animal-add-page" class="btn-circle">&plus;</a>
         </div>
+    </div>
         <footer data-role="footer">
             <ul>
                 <li><a href="#recent-page">
@@ -322,6 +323,24 @@
         </form>
     </section>
 
+ <!-- USER EDIT PHOTO PAGE -->
+ <section data-role="page" id="user-edit-photo-page">
+    <header data-role="header">
+        <h1>Edit User Photo</h1>
+        <ul>
+            <li><a href="#" data-rel="back">Back</a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submit-user-edit-photo-form">Submit</a></li>
+        </ul>
+    </header>
+    <form data-role="main" data-ajax="false" id="user-edit-photo-form" class="padded display-flex flex-column full overscroll">
+        <input type="hidden" id="user-edit-photo-image">
+        <label class="body imagepicker replace">
+            <input type="file" id="user-edit-photo-input" data-role="none" class="hidden">
+        </label>
+    </form>
+</section>
+
 
 
 
@@ -359,8 +378,9 @@
     </div>
 </section>
 
-     <!-- ANIMAL EDIT PAGE -->
-     <section data-role="page" id="animal-edit-page">
+  
+    <!-- ANIMAL EDIT PAGE -->
+    <section data-role="page" id="animal-edit-page">
         <header data-role="header">
             <h1>Edit Animal</h1>
             <ul>
