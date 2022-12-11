@@ -2,6 +2,7 @@ import { query } from "./functions.js";
 import { makeAnimalList } from "./parts.js";
 
 
+
 export const checkSignupForm = () => {
     let username = $("#signup-username").val();
     let email = $("#signup-email").val();
@@ -33,6 +34,7 @@ export const checkSignupForm = () => {
 }
 
 
+
 export const checkUserEditForm = () => {
     let name = $("#user-edit-name").val();
     let username = $("#user-edit-username").val();
@@ -48,12 +50,11 @@ export const checkUserEditForm = () => {
         ]
     }).then((data)=>{
         if (data.error) {
-            throw (data.error);
+            throw(data.error);
         } else {
             window.history.back();
         }
-    });
-
+    })
 }
 export const checkPasswordEditForm = () => {
     let password = $("#password-edit-password").val();
@@ -78,7 +79,6 @@ export const checkPasswordEditForm = () => {
         }
     })
 }
-
 export const checkUserEditPhotoForm = () => {
     let photo = $("#user-edit-photo-image").val();
     
@@ -101,13 +101,12 @@ export const checkUserEditPhotoForm = () => {
 
 
 
-
 export const checkAnimalAddForm = () => {
     let name = $("#animal-add-name").val();
     let type = $("#animal-add-type").val();
     let breed = $("#animal-add-breed").val();
     let description = $("#animal-add-description").val();
-    let image = $("#animal-add-image").val();
+    let image = $("#animal-add-photo-image").val();
     
     query({
         type: 'insert_animal',
@@ -127,15 +126,13 @@ export const checkAnimalAddForm = () => {
         }
     })
 }
-
 export const checkAnimalEditForm = () => {
     let name = $("#animal-edit-name").val();
     let type = $("#animal-edit-type").val();
     let breed = $("#animal-edit-breed").val();
     let description = $("#animal-edit-description").val();
     let image = $("#animal-edit-photo-image").val();
-
-
+    
     query({
         type: 'update_animal',
         params: [
@@ -154,7 +151,6 @@ export const checkAnimalEditForm = () => {
         }
     })
 }
-
 export const checkAnimalDeleteForm = () => {
     query({
         type:"delete_animal",
@@ -167,6 +163,8 @@ export const checkAnimalDeleteForm = () => {
         }
     })
 }
+
+
 
 export const checkLocationAddForm = () => {
     let animalid = $("#location-animal-id").val();
@@ -188,6 +186,7 @@ export const checkLocationAddForm = () => {
         }
     })
 }
+
 
 
 
