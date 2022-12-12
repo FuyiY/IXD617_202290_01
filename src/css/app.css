@@ -582,7 +582,7 @@ a {
     position:absolute;
     font-size:3em;
     vertical-align:middle;
-    top:50%;
+    top:13%;
     left:50%;
     transform:translate(-50%,-50%);
   }
